@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/service.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/css/splide-extension-video.min.css">
+{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <div class="container">
+        <h2>Свадьба</h2>
+    </div>
+    <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://ru.hellomagazine.com/thumb/1000x600_0/images/2019/July/borisova/wedd23-zahod.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://fainaidea.com/wp-content/uploads/2019/06/tild3331-3762-4564-b465-623063656532__20171128_gaf_u39_586.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="container down__container">
+        <p>Для того чтобы свадьба прошла идеально, нужно поручить организацию профессионалам. «Хохлома» предлагает полный спектр услуг: разработку печатной продукции с индивидуальным дизайном, подбор фотографа и видеографа, оформление выездной регистрации и банкетного зала, выбор места торжества и заказ меню, разработку шоу-программы с участием лучших ведущих и артистов, а также услуги свадебного распорядителя. Не тратьте время на свадебные хлопоты, проведите его в предвкушении торжества.</p>
+        <button class="widget__button">Открыть калькулятор стоимости</button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/js/splide-extension-video.min.js"></script>
+<script>
+    let costs = [0, 0, 0]
+    let calcData = {
+        name: 'Свадьба',
+        startPrice: 500,
+        time: {min: 4, max: 16, cost: 400},
+        area: {'Площадь 1': 200, 'Площадь 2': 300, 'Площадь 3': 300},
+        people: {min: 5, max: 40, cost: 20}
+    }
+    new Splide('.splide', {autoHeight: true, 'cover': true, 'heightRatio': 0.5, fixedHeight: '30rem'}).mount();
+</script>
+<script src='{{url_for('static', filename='script/calc.js')}}'></script>
+<script src='{{url_for('static', filename='script/script.js')}}'></script>
+{% endblock %}

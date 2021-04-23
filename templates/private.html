@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/service.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/css/splide-extension-video.min.css">
+{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <div class="container">
+        <h2>Презентации</h2>
+    </div>
+    <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="https://media.istockphoto.com/photos/young-stock-trader-shows-to-the-executive-managers-cryptocurrency-and-picture-id921054562?k=6&m=921054562&s=612x612&w=0&h=mtH-mGMzzqSE0-14LMmJDd817mrRCJrLLVKskEycEAA=" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1602/vadymvdrobot160201161/52193187-smiling-charismatic-speaker-giving-public-presentation-in-conference-hall.jpg?ver=6" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="container down__container">
+        <p>Успех товара, услуги или самой компании зависит от того, как их преподнести. Презентация поможет заявить о себе и привлечь внимание целевой аудитории. Организация конференций — трудоемкий и ответственный процесс, он предусматривает решение широкого спектра задач по их подготовке.  «Хохлома» организует мероприятие, соответствующее имиджу вашей компании: разработает сценарий, предложит варианты фуршета и дизайн-концепции, подберет ведущего и артистов, а также предоставит качественное музыкальное оборудование.</p>
+        <button class="widget__button">Открыть калькулятор стоимости</button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/js/splide-extension-video.min.js"></script>
+<script>
+    let costs = [0, 0, 0]
+    let calcData = {
+        name: 'Презентация',
+        startPrice: 2000,
+        time: {min: 1, max: 5, cost: 300},
+        area: {'Площадь 1': 200, 'Площадь 2': 300, 'Площадь 3': 300},
+        people: {min: 10, max: 1000, cost: 5}
+    }
+    new Splide('.splide', {autoHeight: true, 'cover': true, 'heightRatio': 0.5, fixedHeight: '30rem'}).mount();
+</script>
+<script src='{{url_for('static', filename='script/calc.js')}}'></script>
+<script src='{{url_for('static', filename='script/script.js')}}'></script>
+{% endblock %}

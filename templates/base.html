@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/styleless.css')}}">
+    <script src="https://kit.fontawesome.com/a635fae22c.js" crossorigin="anonymous"></script>
+    {% block styles %}{% endblock %}
+    <title>Document</title>
+</head>
+<body>
+<div class="overlay">
+    <div class="widget">
+
+    </div>
+</div>
+<header class="header">
+        <div class="container">
+            <div class="header-navbar">
+                <a href="/"><img src="{{url_for('static', filename='img/logo.svg')}}" alt="Логотип" class="header-navbar-logo"></a>
+                <div class="header-navbar-menu">
+                    <a href="/about" class="header-navbar-menu-link">О компании</a>
+                    <a href="/services" class="header-navbar-menu-link">Услуги</a>
+                    <a href="/reviews" class="header-navbar-menu-link">Отзывы</a>
+                    <a href="#" class="header-navbar-menu-link">Проекты</a>
+                    <a href="/clients" class="header-navbar-menu-link">Клиенты</a>
+                    <a href="#" class="header-navbar-menu-link">Контакты</a>
+                </div>
+                <!-- /.header-navbar-link -->
+            </div>
+        </div>
+        <!-- /.header-navbar -->
+    </header>
+{% block content %}{% endblock %}
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-info">
+                            <img src="{{url_for('static', filename='img/footer/1.svg')}}" alt="1">
+                            <a href="tel:+89044915018">8-904-491-50-18</a>
+                        </div>
+                        <div class="footer-contacts-info">
+                            <img src="{{url_for('static', filename='img/footer/2.svg')}}" alt="1">
+                            <a href="mailto:XOXLOMA-EP@MAIL.RU">XOXLOMA-EP@MAIL.RU</a>
+                        </div>
+                        <div class="footer-contacts-info">
+                            <img src="{{url_for('static', filename='img/footer/3.svg')}}" alt="1">
+                            <a href="">Пароходская 4</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-3 -->
+                <div class="col-lg-7 footer-info">
+                    <div class="footer-social-link">
+                        <span>Мы в соц.сетях:</span>
+                        <a target="_blank" href="https://vk.com/xoxloma_ep">
+                           <img src="{{url_for('static', filename='img/footer-social-icon/1.svg')}}" alt="Иконка">
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/xoxloma_event/">
+                           <img src="{{url_for('static', filename='img/footer-social-icon/2.svg')}}" alt="Иконка">
+                        </a>
+                    </div>
+                    <!-- /.footer-social-link -->
+                    <div class="line"></div>
+                    <div class="footer-link">
+                        <a href="#" class="footer-link-navbar">О компании</a>
+                        <a href="#" class="footer-link-navbar">Услуги</a>
+                        <a href="#" class="footer-link-navbar">Отзывы</a>
+                        <a href="#" class="footer-link-navbar">Проекты</a>
+                        <a href="#" class="footer-link-navbar">Клиенты</a>
+                        <a href="#" class="footer-link-navbar">Контакты</a>
+                    </div>
+                </div>
+                <!-- /.col-lg-7 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src=".{{url_for('static', filename='script/bootstrap.min.js')}}"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/reviews.css') }}">
+{% endblock %}
+{% block content %}
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 main-header">
+                    <h1>Отзывы</h1>
+                </div>
+                <!-- /.main-header-text -->
+                {% for r in reviews %}
+                    <div class="col-lg-6 main-review">
+                        <div class="main-review-block">
+                            <img src="{{ r.imageurl }}" height="70px" alt="Мужичек">
+                            <div class="main-review-block-text">
+                                <h2>{{ r.header }}</h2>
+                                <p>{{ r.text }}</p>
+                                <span class="name">{{ r.name }}</span>
+                                <span class="date">{{ r.date }}</span>
+                            </div>
+                            <!-- /.main-review-block -->
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- /.main-review -->
+            <!-- /.main-review -->
+        </div>
+        <!-- /.container -->
+    </main>
+    <!-- /.header -->
+{% endblock %}

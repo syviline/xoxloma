@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block styles %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/css/splide-extension-video.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/services.css')}}">
+{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <div class="container">
+        <h1>Услуги</h1>
+        <div class="services__list">
+            <a href="service/wedding">
+                <div class="service" style="background: url('{{url_for('static', filename='img/service1.png')}}')">
+                <div class="text">Свадьба</div>
+            </div>
+            </a>
+            <a href="service/corporative">
+                <div class="service" style="background: url('{{url_for('static', filename='img/service2.png')}}">
+                <div class="text">Корпоративные события</div>
+            </div>
+            </a>
+            <a href="service/private">
+                <div class="service" style="background: url('{{url_for('static', filename='img/service3.png')}}">
+                <div class="text">Презентации</div>
+            </div>
+            </a>
+            <a href="service/graduation">
+                <div class="service" style="background: url('{{url_for('static', filename='img/service4.png')}}">
+                    <div class="text">Выпускные</div>
+                </div>
+            </a>
+            <a href="">
+                <div class="service" style="background: #ec4f32">
+                    <div class="text"></div>
+                </div>
+            </a>
+            <a href="">
+                <div class="service" style="background: #ec4f32">
+                    <div class="text"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

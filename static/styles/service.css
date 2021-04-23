@@ -1,0 +1,53 @@
+header {
+    background-color: #404040;
+    position: relative;
+}
+
+.wrapper h2 {
+    font-size: 36px;
+    margin-top: 2rem;
+}
+
+.splide {
+    margin-top: 2rem;
+}
+
+.splide, .splide__track, .splide__list, .splide__slide {
+    height: 70vh;
+}
+
+.down__container {
+    margin-top: 2rem;
+}
+
+.down__container p {
+    width: 70%;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.fullcost {
+    font-size: 1rem;
+}
+
+.widget__button {
+    padding: 1rem;
+    background-color: #ff6041;
+    font-weight: 500;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.widget__button:hover {
+    background-color: #c83c23;
+}
+
+.down__container {
+    margin-top: 2rem !important;
+}
+

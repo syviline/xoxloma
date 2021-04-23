@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+           display: flex;
+           justify-content: center;
+        }
+
+        form {
+            background-color: #F5F5F5;
+            padding: 20px 100px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        input, textarea {
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<form action="add_review" method="POST">
+    <h1>Добавить отзыв</h1>
+    <h2>Имя и фамилия: </h2>
+    <input type="text" name="name">
+    <h2>Заголовок: </h2>
+    <input type="text" name="header">
+    <h2>Текст</h2>
+    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+    <h2>Ссылка на аватарку: </h2>
+    <input type="text" name="link">
+    <h2>Дата:</h2>
+    <input type="text" name="date"><br>
+    <input type="submit">
+</form>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</body>
+</html>

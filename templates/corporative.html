@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/service.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/css/splide-extension-video.min.css">
+{% endblock %}
+{% block content %}
+<div class="wrapper">
+    <div class="container">
+        <h2>Корпоративные события</h2>
+    </div>
+    <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="https://www.restoclub.ru/uploads/article_thumbnail_big/f/6/9/7/f697a9c2a94c3567fc5fc05702c02ff2.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://i.work.ua/article/1650b.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img src="https://ryazan.life/wp-content/uploads/2018/11/korporativ.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="container down__container">
+        <p>Если вы в поиске интересного формата для корпоративного мероприятия, то квест- как раз то, что вам нужно. Какие преимущества квеста? Возможность выбрать или придумать тематику: наша команда разработает индивидуальный сценарий и реквизит. Независимость от места:  квест возможно провести как в офисе вашей компании, так и на природе. Сплочение компании: одним из важных факторов увеличения работоспособности команды является ее сплочение. По окончанию мероприятия, как правило, участники чувствуют себя комфортнее в коллективе. </p>
+        <button class="widget__button">Открыть калькулятор стоимости</button>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/js/splide-extension-video.min.js"></script>
+<script>
+    let costs = [0, 0, 0]
+    let calcData = {
+        name: 'Корпоратив',
+        startPrice: 1200,
+        time: {min: 2, max: 10, cost: 200},
+        area: {'Площадь 1': 200, 'Площадь 2': 300, 'Площадь 3': 300},
+        people: {min: 10, max: 100, cost: 15}
+    }
+    new Splide('.splide', {autoHeight: true, 'cover': true, 'heightRatio': 0.5, fixedHeight: '30rem'}).mount();
+</script>
+<script src='{{url_for('static', filename='script/calc.js')}}'></script>
+<script src='{{url_for('static', filename='script/script.js')}}'></script>
+{% endblock %}
