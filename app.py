@@ -72,4 +72,4 @@ def about():
 
 if __name__ == "__main__":
     db_session.global_init('db/db.db')
-    app.run(debug=True)
+    app.run(debug=True, host='192.168.43.116', port=80)

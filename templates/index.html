@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@latest/dist/css/splide-extension-video.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.6.0/main.min.js"></script>
 	<link rel="stylesheet" href="{{url_for('static', filename='styles/indexstyle.css')}}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/index2.css') }}">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -40,8 +41,6 @@
 		<ul class="splide__list">
 			<li class="splide__slide" data-splide-html-video="{{url_for('static', filename='video/videoplayback.mp4')}}" style="width: 100vw;">
 				<div class="splide__content">
-					<div class="splide__content-title">Мерседес шоурум</div>
-					<a href="#" class="splide-link">Смотреть кейс</a>
 				</div>
 				<img src="https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image.jpeg" alt=""></li>
 			<!-- <li class="splide__slide" data-splide-youtube="https://www.youtube.com/embed/EY8LMYT4QyY"><img src="https://global-uploads.webflow.com/5ef5480befd392489dacf544/5f9f5e5943de7e69a1339242_5f44a7398c0cdf460857e744_img-image.jpeg" alt=""></li> -->
@@ -50,12 +49,118 @@
 </div>
 		</div>
 	</div>
-	<div class="wrapper">
-		<div class="container">
-			<button class="widget__button">Открыть калькулятор</button>
-			<button class="calendar__button">Открыть календарь</button>
-		</div>
-	</div>
+	<main class="main">
+        <div class="container">
+            <div class="row serfrsokvm">
+                <div class="col-lg-12 main-header">
+                    <h1>О компании</h1>
+                </div>
+                <div class="col-lg-6">
+                    <p class="ebal">«Xoxloma» с 2011 года организует мероприятия различной направленности для частных и корпоративных клиентов Уральского федерального округа. Компания имеет успешный опыт проведения праздничных и торжественных событий, спортивных соревнований, квестов в реальности, корпоративов, мероприятий в сфере маркетинга и бизнеса</p>
+                    <div class="row">
+                        <div class="col">
+                            <img src="./img/smi.svg" alt="">
+                        </div>
+                        <div class="col">
+                            <img src="./img/orders.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-auto col-auto d-grid">
+                    <img class="aegaefimg" src="./img/logo2.svg">
+                </div>
+            </div>
+
+            <div class="row kewuhcwekbhc">
+                <div class="col-lg-12 main-header">
+                    <h1>Услуги</h1>
+                </div>
+                <div id="carouselExampleFade" class="w-100 carousel slide carousel-fade" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img class="d-block w-100" src="{{ url_for('static', filename='img/index/imaeg.svg') }}" alt="">
+                                </div>
+                                <div class="col-2"></div>
+                                <div class="awef col-5">
+                                    <img class="d-block w-100" src="{{ url_for('static', filename='img/index/imafgea.svg') }}" alt="">
+
+                                    <div class="buttons-aefcaef">
+                                        <a href="#" class="button-msevins">Больше услуг</a>
+                                        <a href="#" class="button-msevins"><img src="{{ url_for('static', filename='img/index/aeaef.svg') }}" class="fas aport fa-calendar-alt"></img>Календарь событий</a>
+                                        <a href="#" class="button-msevins"><img src="{{ url_for('static', filename='img/index/aefaefrsvrew.svg') }}" class="fas aport fa-calculator"></img>Калькулятор услуг</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img class="d-block w-100" src="{{ url_for('static', filename='img/index/imaeg.svg') }}" alt="">
+                                </div>
+                                <div class="col-2"></div>
+                                <div class="col-5">
+                                    <img class="d-block w-100" src="{{ url_for('static', filename='img/index/imafgea.svg') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('.carousel').carousel({
+                        interval: 2000
+                    })
+                </script>
+            </div>
+
+            <div class="row kewuwedeefaehc">
+                <div class="col-lg-12 adlgviearh">
+                    <h1>Наши партнеры</h1>
+                </div>
+                <div class="col-12">
+                    <div class="lrnfljern">
+                        <div class="srf">
+                            <div class="logoaefae">
+                                <img src="{{ url_for('static', filename='img/index/serkgmsr.svg') }}" alt="" class="swvrjnerwov">
+                            </div>
+                            <div class="lrjvnb">Здесь должен быть слайдер с отзывами от партнеров</div>
+                        </div>
+                    </div>
+
+                    <script>
+                        $('.lrnfljern').slick({
+                            dots: false,
+                            infinite: true,
+                            speed: 300,
+                            slidesToShow: 1,
+                            centerMode: true,
+                            variableWidth: true
+                        });
+                    </script>
+                </div>
+                <div class="coekif col-12">
+                    <div class="row aefkrsuh">
+                        <div class="col-auto">
+                            <a href="#" class="laemfojr">Все отзывы партнеров</a>
+                        </div>
+                        <div class="losefijsofn col-auto ml-auto">
+                            Вкратце они в восторге
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </main>
+    <!-- /.main -->
 	<footer>
 		<div class="container">
 			<div class="left">
